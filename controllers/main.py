@@ -21,6 +21,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+from appconfig import _config
 from controllers.base import BaseHandler
 
 from google.appengine.api import app_identity
@@ -35,4 +36,4 @@ app = webapp2.WSGIApplication(
     [
      ('/', MainHandler),
     ],
-    debug=True)
+    debug=_config.DEBUG)
